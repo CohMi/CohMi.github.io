@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coh Miyao (宮尾 光) - Postdoctoral JSPS Fellow at Tokyo University of Science. Researching BSM phenomenology, neutrino physics, and machine learning applications in flavor physics.">
+    <meta name="keywords" content="Coh Miyao, 宮尾光, Physics, Neutrino, Dark Matter, Flavor Symmetry, Machine Learning, Reinforcement Learning, HEP-PH, Tokyo University of Science">
+    
     <title>Coh Miyao's Research Page</title>
     
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -14,19 +17,22 @@
             }
         };
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
             --primary-color: #2c3e50;
             --accent-color: #3498db;
             --bg-color: #f9f9f9;
+            --text-color: #333;
+            --light-gray: #eee;
         }
 
         body {
             font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
             line-height: 1.8;
-            color: #333;
-            max-width: 950px;
+            color: var(--text-color);
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
             background-color: var(--bg-color);
@@ -34,7 +40,7 @@
 
         header {
             border-bottom: 3px solid var(--primary-color);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding-bottom: 20px;
             text-align: center;
         }
@@ -42,21 +48,38 @@
         h1 { margin: 0; font-size: 2.2rem; color: var(--primary-color); }
         .affiliation { font-size: 1.1rem; color: #666; margin-top: 10px; }
 
-        /* タブメニュー */
+        /* External Links Styling */
+        .external-profiles {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+        .external-profiles a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .external-profiles a:hover { color: var(--accent-color); }
+        .profile-label { font-size: 0.7rem; display: block; margin-top: 2px; font-weight: bold; }
+
+        /* Tab Menu */
         .tab-menu {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             border-bottom: 2px solid #ddd;
             margin-bottom: 30px;
             gap: 5px;
         }
 
         .tab-btn {
-            padding: 12px 20px;
+            padding: 12px 18px;
             cursor: pointer;
             border: none;
             background: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             color: #777;
             transition: 0.3s;
@@ -67,11 +90,11 @@
         .tab-btn:hover { color: var(--accent-color); }
         .tab-btn.active { color: var(--accent-color); border-bottom: 3px solid var(--accent-color); }
 
-        /* タブコンテンツ */
+        /* Tab Content Area */
         .tab-content {
             display: none;
             background: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 8px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             min-height: 400px;
@@ -85,21 +108,40 @@
         }
 
         h2 { font-size: 1.5rem; border-left: 6px solid var(--primary-color); padding-left: 15px; margin-bottom: 20px; color: var(--primary-color); }
-        h3 { font-size: 1.2rem; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h3 { font-size: 1.2rem; color: var(--primary-color); border-bottom: 1px solid var(--light-gray); padding-bottom: 5px; margin-top: 40px; }
 
         ul { padding-left: 20px; }
-        li { margin-bottom: 15px; }
+        li { margin-bottom: 12px; }
 
         .publication-title { font-weight: bold; display: block; color: #000; }
         .publication-meta { font-size: 0.95rem; color: #555; }
+        .arxiv-link { color: #b31b1b; font-weight: bold; font-size: 0.9rem; text-decoration: none; }
 
-        .contact-box { background-color: #f0f4f8; border: 1px solid #d1d9e0; padding: 20px; border-radius: 8px; margin-top: 40px; }
+        /* Download Button */
+        .cv-download {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .cv-download:hover { background-color: var(--accent-color); }
 
-        footer { margin-top: 60px; font-size: 0.8rem; text-align: center; color: #999; }
+        .item-date { font-family: monospace; color: #666; margin-right: 10px; font-weight: bold; }
+        .item-tag { font-size: 0.75rem; padding: 2px 6px; border-radius: 3px; background: #eee; margin-right: 8px; vertical-align: middle; font-weight: bold; }
+
+        .contact-box { background-color: #f0f4f8; border: 1px solid #d1d9e0; padding: 25px; border-radius: 8px; margin-top: 40px; }
+
+        footer { margin-top: 60px; font-size: 0.8rem; text-align: center; color: #999; border-top: 1px solid #eee; padding-top: 20px; }
 
         @media (max-width: 600px) {
             h1 { font-size: 1.6rem; }
-            .tab-btn { padding: 10px 10px; font-size: 0.9rem; }
+            .tab-btn { padding: 8px 10px; font-size: 0.85rem; }
+            .external-profiles { gap: 10px; }
         }
     </style>
 </head>
@@ -111,12 +153,29 @@
             Department of Physics and Astronomy, Faculty of Science and Technology,<br>
             Tokyo University of Science
         </div>
+
+        <div class="external-profiles">
+            <a href="https://inspirehep.net/authors/2655930?ui-citation-summary=true" target="_blank" title="INSPIRE-HEP">
+                <i class="fas fa-university"></i>
+                <span class="profile-label">INSPIRE</span>
+            </a>
+            <a href="https://orcid.org/0009-0009-5692-7909" target="_blank" title="ORCID">
+                <i class="fab fa-orcid"></i>
+                <span class="profile-label">ORCID</span>
+            </a>
+            <a href="https://arxiv.org/search/hep-ph?searchtype=author&query=Miyao,+C" target="_blank" title="arXiv">
+                <i class="fas fa-file-pdf"></i>
+                <span class="profile-label">arXiv</span>
+            </a>
+        </div>
     </header>
 
     <nav class="tab-menu">
+        <button class="tab-btn" onclick="openTab(event, 'cv')">CV</button>
         <button class="tab-btn active" onclick="openTab(event, 'research')">Research Statement</button>
         <button class="tab-btn" onclick="openTab(event, 'publications')">Publications</button>
-        <button class="tab-btn" onclick="openTab(event, 'cv')">CV</button>
+        <button class="tab-btn" onclick="openTab(event, 'talks')">Talks</button>
+        <button class="tab-btn" onclick="openTab(event, 'software')">Software</button>
     </nav>
 
     <div id="research" class="tab-content active">
@@ -125,10 +184,10 @@
             I am interested in phenomenology beyond the Standard Model, particularly focusing on neutrinos and dark matter.
         </p>
 
-        <h3 style="margin-top: 40px;">
+        <h3>
             <u>Research on WIMP Dark Matter Based on a $Z_4$ Flavor Symmetry</u>&nbsp;&nbsp;[1]
             <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.035017" target="_blank" style="font-size: 0.9rem; text-decoration: none; color: var(--accent-color);">
-                Phys. Rev. D 106 (2022) 3, 035017
+                Phys. Rev. D 106 (2022) 035017
             </a>
         </h3>
         <p>
@@ -155,12 +214,8 @@
         <p>
             As a result, we found parameter regions where the correct relic abundance is obtained without conflict with observations, and where direct detection by the future experiment can be tested.
         </p>
-        <p>
-            I consider that similar interaction structures of dark matter can also be realized by other flavor symmetries.
-            By considering them together with other physics where flavor structures play an important role, such as neutrino oscillations, we may gain a deeper understanding of the fundamental role of flavor.
-        </p>
 
-        <h3 style="margin-top: 40px;">
+        <h3>
             <u>Neutrino Study Based on a $U(1)_{L_\mu - L_\tau}$ Gauge Model</u>&nbsp;&nbsp;[3]
             <a href="https://link.springer.com/article/10.1007/JHEP12(2024)018" target="_blank" style="font-size: 0.9rem; text-decoration: none; color: var(--accent-color);">
                 JHEP 12 (2024) 018
@@ -176,15 +231,6 @@
             In this framework, the neutrino mass matrix has a specific flavor structure, which leads to predictions for neutrino oscillation parameters through the resulting constraints.
         </p>
         <p>
-            In this way, $U(1)_{L_\mu-L_\tau}$ gauge models are very attractive because the assumption of a flavor symmetry allows us to predict otherwise free parameters.
-            However, recent studies have pointed out that increasingly precise neutrino oscillation data may be in tension with simple $U(1)_{L_\mu-L_\tau}$ gauge models.
-        </p>
-        <p>
-            Therefore, I first reanalyzed the minimal $U(1)_{L_\mu-L_\tau}$ model using the latest experimental data.
-            I found that the minimal model is barely allowed under current neutrino oscillation data and cosmological constraints.
-            However, such a marginal situation requires a careful study of model-dependent constraints.
-        </p>
-        <p>
             For this reason, I also studied constraints from the mixing between the SM $Z$ boson and the $U(1)_{L_\mu-L_\tau}$ gauge boson $Z'$ (the $Z$–$Z'$ mixing).
             If such mixing exists, the $Z'$ acquires interactions with neutral currents, which induce additional contributions to flavor-changing meson decays (FCMD) and atomic parity violation (APV).
             By evaluating these constraints, we showed that most of the parameter space of the minimal model is excluded by the $Z$–$Z'$ mixing constraints.
@@ -192,16 +238,11 @@
             As a result, we concluded that the minimal model is completely excluded by model-dependent constraints.
         </p>
         <p>
-            Once the minimal model is excluded, the next important question is what kind of model can still be viable.
             To address this, we constructed and analyzed an extended model with an additional scalar field carrying a $U(1)_{L_\mu-L_\tau}$ charge.
             We found that constraints from the $Z$–$Z'$ mixing and the Higgs sector become weaker, and that the extended model is phenomenologically viable.
         </p>
-        <p>
-            In this extended model, constraints from neutrino oscillation data are also relaxed, so its predictive power is slightly reduced, but the model remains attractive.
-            I believe that models with a special structure in the $\mu$ and $\tau$ flavors are still promising and may provide clues toward a more fundamental theory.
-        </p>
 
-        <h3 style="margin-top: 40px;">
+        <h3>
             <u>Exploration of New Physics Models Using Machine Learning</u>&nbsp;&nbsp;[2, 4]
             <br>
             <a href="https://link.springer.com/article/10.1007/JHEP12(2023)021" target="_blank" style="font-size: 0.9rem; text-decoration: none; color: var(--accent-color);">
@@ -215,33 +256,16 @@
             In these works [2,4], I introduced reinforcement learning, a type of machine learning, as a new exploration method to construct theoretical models that address quark and lepton flavor structures and cosmological problems.
         </p>
         <p>
-            Recently, the application of machine learning to physics has attracted much attention.
-            I believe this is because machine learning is expected to efficiently perform large-scale searches that are difficult for humans to handle.
-            Motivated by this expectation, I applied machine learning to model building, which often requires a huge number of trials.
-        </p>
-        <p>
             In particular, I focused on the Froggatt–Nielsen model.
-            In this model, a $U(1)$ flavor symmetry and a new scalar field (a flavon field) are introduced, and appropriate $U(1)$ charges are assigned to particles.
-            Through the breaking of the $U(1)$ symmetry, the observed mass hierarchies can be reproduced.
-            The difficult point is how to assign the $U(1)$ charges to each particle.
-            I attempted to let machine learning handle this task and to find charge assignments that describe reality.
-        </p>
-        <p>
             In work [2], I applied a reinforcement learning algorithm to a Froggatt–Nielsen model extended to the lepton sector, and automatically learned $U(1)$ charge assignments for quarks and leptons.
             As a result, 21 viable models consistent with quark and lepton masses and mixing angles were obtained.
             It was also suggested that the normal hierarchy of neutrino masses is preferred over the inverted hierarchy.
-            In addition, we obtained testable predictions for future experiments, such as the effective mass in neutrinoless double beta decay and sizable leptonic CP violation induced by the flavon field.
         </p>
         <p>
-            In work [4], as an extension of [2], I focused on flaxion models (the flavon is regarded as the origin of axion) and studied the $U(1)$ charge structure of quarks and leptons using a more efficient reinforcement learning–based search.
-            In this scenario, the $U(1)$ symmetry is identified with the Peccei–Quinn symmetry related to the strong CP problem, and the axion emerges from the flavon field.
+            In work [4], as an extension of [2], I focused on flaxion models (the flavon is regarded as the origin of axion).
+            In this scenario, the $U(1)$ symmetry is identified with the Peccei–Quinn symmetry related to the strong CP problem.
             As a result, more than 150 realistic solutions were obtained in the quark sector, which can simultaneously address flavor problems in the Standard Model and cosmological issues.
             We also confirmed that this reinforcement learning–based method is more efficient than conventional optimization methods in searching discrete parameter spaces.
-            Furthermore, based on the obtained solutions, we discussed the sensitivity of future axion detection experiments and obtained phenomenologically relevant results.
-        </p>
-        <p>
-            In this way, I found that machine learning–based approaches can be powerful tools for exploring symmetries and model structures.
-            On the other hand, due to limitations in computational resources and the still-developing methods for applying machine learning to physics, I believe there is significant room for further development.
         </p>
     </div>
 
@@ -251,73 +275,182 @@
             
             <li class="publication-item" style="margin-bottom: 25px;">
                 <span style="font-weight: bold; color: var(--primary-color); margin-right: 10px;">[4]</span>
-                <a href="https://link.springer.com/article/10.1007/JHEP10(2025)043" target="_blank" style="text-decoration: none; color: inherit;">
+                <a href="https://link.springer.com/article/10.1007/JHEP10(2025)043" target="_blank" style="text-decoration: none;">
                     <span class="publication-title" style="display: inline; color: var(--accent-color); text-decoration: underline;">"Reinforcement learning-based statistical search strategy for an axion model from flavor"</span>
                 </a>
                 <br>
-                <span class="publication-meta">S. Nishimura, <u>C. Miyao</u>, and H. Otsuka, <em>JHEP 10 (2025) 043 [arXiv:2409.10023]</em></span>
+                <span class="publication-meta">S. Nishimura, <u>C. Miyao</u>, and H. Otsuka, <em>JHEP 10 (2025) 043</em> 
+                [<a href="https://arxiv.org/abs/2409.10023" class="arxiv-link">arXiv:2409.10023</a>]</span>
             </li>
 
             <li class="publication-item" style="margin-bottom: 25px;">
                 <span style="font-weight: bold; color: var(--primary-color); margin-right: 10px;">[3]</span>
-                <a href="https://link.springer.com/article/10.1007/JHEP12(2024)018" target="_blank" style="text-decoration: none; color: inherit;">
+                <a href="https://link.springer.com/article/10.1007/JHEP12(2024)018" target="_blank" style="text-decoration: none;">
                     <span class="publication-title" style="display: inline; color: var(--accent-color); text-decoration: underline;">"New Constraints on Gauged $U(1)_{L_\mu -L_\tau}$ Models via $Z-Z'$ Mixing"</span>
                 </a>
                 <br>
-                <span class="publication-meta">K. Asai, <u>C. Miyao</u>, S. Okawa and K. Tsumura, <em>JHEP 12 (2024) 018 [arXiv:2401.17613]</em></span>
+                <span class="publication-meta">K. Asai, <u>C. Miyao</u>, S. Okawa and K. Tsumura, <em>JHEP 12 (2024) 018</em> 
+                [<a href="https://arxiv.org/abs/2401.17613" class="arxiv-link">arXiv:2401.17613</a>]</span>
             </li>
 
             <li class="publication-item" style="margin-bottom: 25px;">
                 <span style="font-weight: bold; color: var(--primary-color); margin-right: 10px;">[2]</span>
-                <a href="https://link.springer.com/article/10.1007/JHEP12(2023)021" target="_blank" style="text-decoration: none; color: inherit;">
+                <a href="https://link.springer.com/article/10.1007/JHEP12(2023)021" target="_blank" style="text-decoration: none;">
                     <span class="publication-title" style="display: inline; color: var(--accent-color); text-decoration: underline;">"Exploring the flavor structure of quarks and leptons with reinforcement learning"</span>
                 </a>
                 <br>
-                <span class="publication-meta">S. Nishimura, <u>C. Miyao</u>, and H. Otsuka, <em>JHEP 12 (2023) 021 [arXiv:2304.14176]</em></span>
+                <span class="publication-meta">S. Nishimura, <u>C. Miyao</u>, and H. Otsuka, <em>JHEP 12 (2023) 021</em> 
+                [<a href="https://arxiv.org/abs/2304.14176" class="arxiv-link">arXiv:2304.14176</a>]</span>
             </li>
 
             <li class="publication-item" style="margin-bottom: 25px;">
                 <span style="font-weight: bold; color: var(--primary-color); margin-right: 10px;">[1]</span>
-                <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.035017" target="_blank" style="text-decoration: none; color: inherit;">
+                <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.035017" target="_blank" style="text-decoration: none;">
                     <span class="publication-title" style="display: inline; color: var(--accent-color); text-decoration: underline;">"Scalar Dark Matter with a $\mu\tau$ Flavored Mediator"</span>
                 </a>
                 <br>
-                <span class="publication-meta">K. Asai, <u>C. Miyao</u>, S. Okawa and K. Tsumura, <em>Phys. Rev. D 106, 035017 (2022) [arXiv:2205.08998]</em></span>
+                <span class="publication-meta">K. Asai, <u>C. Miyao</u>, S. Okawa and K. Tsumura, <em>Phys. Rev. D 106, 035017 (2022)</em> 
+                [<a href="https://arxiv.org/abs/2205.08998" class="arxiv-link">arXiv:2205.08998</a>]</span>
             </li>
 
         </ul>
     </div>
 
     <div id="cv" class="tab-content">
-        <h2>Curriculum Vitae</h2>
-        <h3>Education</h3>
-        <ul>
-            <li>Apr. 2026 - Present: Postdoctoral JSPS fellow(PD), Tokyo University of Science</li>
-            <li>Apr. 2023 - Mar. 2026: Ph.D. , Kyushu University</li>
-            <li>Apr. 2021 - Mar. 2023: M.S. , Kyushu University</li>
-            <li>Apr. 2017 - Mar. 2021: B.S. , Hiroshima University</li>
-            <li>Apr. 2014 - Mar. 2017: Kumamoto High School</li>
-        </ul>
-        <h3>Professional Experience</h3>
-        <ul>
-            <li>Apr. 2026 - Present: JSPS Research Fellow (PD)</li>
-            <li>Apr. 2023 - Mar. 2026: Kyushu University’s Innovator Fellowship Program</li>
-        </ul>
-        <h3>Skills</h3>
-        <ul>
-            <li>Physics: Neutrino Physics, Dark Matter, Flavor Symmetry</li>
-            <li>Computation: Mathematica, Python, Machine Learning, CalcHEP, micrOMEGAs, Feynrules</li>
-        </ul>
+    <a href="path/to/your/CV_Miyao.pdf" class="cv-download" target="_blank">
+        <i class="fas fa-file-download"></i> Download Full CV (PDF)
+    </a>
+
+    <a id="pageLink01" name="pageLink01"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Personal Data</strong>
+        <span>
+            Name: Coh Miyao (宮尾 光)<br />
+            Legal Name on Passport: Kou Miyao<br />
+            Email: miyao.coh [at] rs.tus.ac.jp / cohgoldtop [at] gmail.com<br />
+        </span>
     </div>
+
+    <a id="pageLink02" name="pageLink02"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Contact</strong>
+        <span>
+            Affiliation: Department of Physics and Astronomy, Faculty of Science and Technology, Tokyo University of Science<br />
+            Address: 2641 Yamazaki, Noda, Chiba 278-8510, Japan<br />
+        </span>
+    </div>
+
+    <a id="pageLink03" name="pageLink03"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Education</strong>
+        <span>
+            Mar. 2026: <strong>Ph.D. in Physics</strong>, Kyushu University, Japan<br />
+            &nbsp;&nbsp;[ Advisor: Prof. Koji Tsumura ]<br />
+            &nbsp;&nbsp;[ Thesis: <em>"Phenomenology of Dark Matter and Neutrino in $\mu$-$\tau$ Flavored Models"</em> ]<br />
+            Mar. 2023: <strong>M.Sc. in Physics</strong>, Kyushu University, Japan<br />
+            &nbsp;&nbsp;[ Advisor: Prof. Koji Tsumura ]<br />
+            Mar. 2021: <strong>B.Sc. in Physics</strong>, Hiroshima University, Japan<br />
+            Mar. 2017: Graduated from Kumamoto High School, Japan<br />
+        </span>
+    </div>
+
+    <a id="pageLink04" name="pageLink04"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Research Experience</strong>
+        <span>
+            Apr. 2026 - Present: <strong>JSPS Research Fellow (PD)</strong>, Tokyo University of Science<br />
+            Apr. 2023 - Mar. 2026: <strong>Kyushu University’s Innovator Fellowship</strong> (Quantum Physics Field)<br />
+        </span>
+    </div>
+
+    <a id="pageLink05" name="pageLink05"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Grants and Awards</strong>
+        <span>
+            <li><strong>JSPS Research Fellowship for Young Scientists (PD)</strong> (JSPS, FY2026-2028)<br />
+                &nbsp;&nbsp;Grant-in-Aid for JSPS Fellows: <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-26KJ0318/" target="_blank">"KAKEN Title"</a>, Project No. 26KJ0318, Principal Investigator</li>
+            <li><strong>QRT Fellowship</strong> (Qube Research & Technologies / Institut Henri Poincaré, 2025)<br />
+                &nbsp;&nbsp;Travel grant for the workshop "Dark Matter and Neutrinos" at IHP, Paris</li>
+            <li><strong>Kyushu University's Innovator Fellowship Program</strong> (MEXT/Kyushu Univ., FY2023-2025)<br />
+                &nbsp;&nbsp;Research grant and stipend for doctoral students</li>
+            <li><strong>Exemption from Scholarship Repayment for Outstanding Results</strong> (JASSO, Mar. 2023)<br />
+                &nbsp;&nbsp;Full exemption from repayment of Type-I scholarship loan</li>
+        </span>
+    </div>
+
+    <a id="pageLink06" name="pageLink06"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Teaching Experience</strong>
+        <span>
+            <li><strong>Student Assistant</strong>, Seinan Gakuin University (Apr. 2022 – Mar. 2023)<br />
+                &nbsp;&nbsp;Support for undergraduate programming classes</li>
+            <li><strong>Teaching Assistant</strong>, Kyushu University (Apr. 2022 – Aug. 2022)<br />
+                &nbsp;&nbsp;Course: Classical Mechanics Exercises (Undergraduate level)</li>
+        </span>
+    </div>
+</div>
+
+<div id="talks" class="tab-content">
+    <h2>Talks and Presentations</h2>
+
+    <a id="pageLink07" name="pageLink07"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>International Conferences</strong>
+        <span>
+            <li><strong>[Oral]</strong> "New Constraints on Gauged $U(1)_{L_\mu - L_\tau}$ Models via $Z-Z'$ Mixing", Workshop on Dark Matter and Neutrinos, IHP, Paris, France (May 2025)</li>
+            <li><strong>[Oral]</strong> "New Constraints on Gauged $U(1)_{L_\mu - L_\tau}$ Models via $Z-Z'$ Mixing", KEK-PH 2025, KEK, Tsukuba, Japan (Feb. 2025)</li>
+            <li><strong>[Oral]</strong> "New Constraints on Gauged $U(1)_{L_\mu - L_\tau}$ Models via $Z-Z'$ Mixing", SUSY 2024, IFT, Madrid, Spain (Jun. 2024)</li>
+            <li><strong>[Oral]</strong> "New Constraints on Gauged $U(1)_{L_\mu - L_\tau}$ Models via $Z-Z'$ Mixing", PLANCK 2024, IST, Lisbon, Portugal (Jun. 2024)</li>
+            <li><strong>[Oral]</strong> "Neutrino models based on the $U(1)_{L_\mu - L_\tau}$ gauge symmetry", KEK-PH 2023, KEK, Tsukuba, Japan (Nov. 2023)</li>
+            <li><strong>[Poster]</strong> "Scalar dark matter with a $\mu\tau$ flavored mediator", Summer Institute 2023 (SI2023), Taichung, Taiwan (Aug. 2023)</li>
+            <li><strong>[Oral]</strong> "Scalar Dark Matter with a $\mu\tau$ Flavored Mediator", HPNP2023, Osaka University, Osaka, Japan (Jun. 2023)</li>
+            <li><strong>[Oral]</strong> "Scalar Dark Matter with a $\mu\tau$ Flavored Mediator", KEK-PH 2022, KEK, Tsukuba, Japan (Nov. 2022)</li>
+        </span>
+    </div>
+
+    <a id="pageLink08" name="pageLink08"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Selected Domestic Workshops and Seminars</strong>
+        <span>
+            <li>"Analysis of Neutrino Mass Matrix with Two Zero Components", 4th Meeting on Particle Physics from String Compactification, Kyushu Univ. (Mar. 2025)</li>
+            <li>"New Constraints on Neutrino Models based on $U(1)_{L_\mu - L_\tau}$ Gauge Symmetry", 130th Kyushu Branch Meeting of JPS, Fukuoka (Nov. 2024)</li>
+            <li><strong>[Poster]</strong> "New Constraints on Gauged $U(1)_{L_\mu - L_\tau}$ Models via $Z-Z'$ Mixing", PPP2024 (Progress in Particle Physics 2024), Kyoto University (Sep. 2024)</li>
+            <li><strong>Oral Presentations at JPS Autumn Meetings</strong>: Delivered 3 oral presentations at JPS Autumn Meetings (2022, 2023, 2024).</li>
+            <li><strong>Other Domestic Workshops</strong>: Presented at 13 domestic workshops including Flavor Physics Workshop, SSI, NHWG, and Kyushu Branch Meetings (2022 – 2024).</li>
+        </span>
+    </div>
+</div>
+
+<div id="software" class="tab-content">
+    <h2>Software & Numerical Tools</h2>
+    ```
+    <a id="pageLink09" name="pageLink09"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Public Codes</strong>
+        <span>
+            <li><i class="fab fa-github"></i> <strong><a href="https://github.com/YOUR_ID/RL-Flavor-Search" target="_blank">RL-Flavor-Search</a></strong><br />
+                &nbsp;&nbsp;A Python framework for reinforcement learning-based exploration of flavor symmetries. Used in [arXiv:2304.14176] and [arXiv:2409.10023].</li>
+        </span>
+    </div>
+    ```
+    <a id="pageLink10" name="pageLink10"></a>
+    <div class="txtTempSet txtTemp1">
+        <strong>Computational Skills</strong>
+        <span>
+            <li><strong>Languages:</strong> Python, Mathematica, C</li>
+            <li><strong>HEP Tools:</strong> micrOMEGAs, FeynRules, CalcHEP</li>
+        </span>
+    </div>
+</div>
 
     <section id="contact" class="contact-box">
         <h2>Contact</h2>
-        <p><strong>Email:</strong> miyao.coh [at] rs.tus.ac.jp</p>
-        <p><strong>Address:</strong> Department of Physics and Astronomy, Faculty of Science and Technology, Tokyo University of Science, Yamazaki, Noda, Chiba 278-8510, Japan</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> miyao.coh [at] rs.tus.ac.jp</p>
+        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Department of Physics and Astronomy, Faculty of Science and Technology, Tokyo University of Science, Yamazaki, Noda, Chiba 278-8510, Japan</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 Coh Miyao - Built with GitHub Pages</p>
+        <p>&copy; 2026 Coh Miyao - Built with GitHub Pages & MathJax</p>
     </footer>
 
     <script>
