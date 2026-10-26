@@ -3,9 +3,9 @@
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Coh Miyao (宮尾 光), JSPS Research Fellow at Tokyo University of Science. Research in dark matter, neutrino physics, flavor symmetry, and machine learning." name="description"/>
+  <meta content="Coh Miyao (宮尾 光; legal name: Kou Miyao), JSPS Research Fellow at Tokyo University of Science. Research in dark matter, neutrino physics, flavor symmetry, and machine learning." name="description"/>
   <meta content="Coh Miyao" name="author"/>
-  <meta content="#f7f8f4" name="theme-color"/>
+  <meta content="#f7fbfe" name="theme-color"/>
   <meta content="Coh Miyao | Particle Physics" property="og:title"/>
   <meta content="Research in dark matter, neutrinos, flavor symmetry, and machine learning." property="og:description"/>
   <meta content="website" property="og:type"/>
@@ -23,15 +23,15 @@
   <style>
 
     :root {
-      --navy: #203b3a;
-      --cyan: #287b71;
-      --cyan-dark: #21665e;
-      --cyan-light: #eaf3ef;
-      --paper: #f7f8f4;
+      --navy: #163b55;
+      --cyan: #268bc0;
+      --cyan-dark: #17658e;
+      --cyan-light: #e8f6fd;
+      --paper: #f7fbfe;
       --white: #fff;
-      --text: #344745;
-      --muted: #586b67;
-      --border: #dce4de;
+      --text: #304d62;
+      --muted: #536d80;
+      --border: #d6e6f0;
       --radius: 14px;
       --max-width: 1160px;
       --header-height: 76px;
@@ -50,7 +50,7 @@
     button, a, summary { -webkit-tap-highlight-color: transparent; }
     [hidden] { display: none !important; }
     :focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
-    ::selection { background: #d5e9df; color: var(--navy); }
+    ::selection { background: #cfeefe; color: var(--navy); }
     .container { width: min(calc(100% - 80px), var(--max-width)); margin-inline: auto; }
     .section { padding: 88px 0; }
     .section-white { background: var(--white); border-block: 1px solid var(--border); }
@@ -61,18 +61,18 @@
     .section-lead { max-width: 770px; margin: 20px 0 36px; color: var(--muted); font-size: 1rem; }
     .skip-link { position: fixed; top: 10px; left: 16px; z-index: 2000; padding: 10px 18px; color: white; background: var(--navy); transform: translateY(-160%); }
     .skip-link:focus { transform: translateY(0); }
-    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(247,248,244,.97); border-bottom: 1px solid var(--border); }
+    .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(247,251,254,.97); border-bottom: 1px solid var(--border); }
     .header-inner { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-mark { display: grid; place-items: center; width: 36px; height: 40px; border: 1px solid #bbcfc4; border-radius: 50% 50% 45% 45%; color: var(--cyan-dark); font: 1.6rem Georgia, serif; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 40px; border: 1px solid #aad4ec; border-radius: 50% 50% 45% 45%; color: var(--cyan-dark); font: 1.6rem Georgia, serif; }
     .brand strong { display: block; color: var(--navy); font: 600 1.12rem Georgia, serif; }
     .brand small { display: block; margin-top: 3px; color: var(--muted); font-size: .58rem; letter-spacing: .14em; }
     .desktop-nav { display: flex; align-items: center; gap: 5px; }
     .desktop-nav a { padding: 9px 10px; border-radius: 6px; color: var(--muted); font-size: .82rem; font-weight: 600; text-decoration: none; }
-    .desktop-nav a:hover, .desktop-nav a.active { color: var(--cyan-dark); background: #e7eee7; }
+    .desktop-nav a:hover, .desktop-nav a.active { color: var(--cyan-dark); background: #e0f2fc; }
     .menu-button { display: none; min-height: 44px; border: 1px solid var(--border); padding: 7px 14px; border-radius: 6px; color: var(--navy); background: white; }
     .mobile-nav { display: none; }
-    .hero { position: relative; border-bottom: 1px solid var(--border); background: #f4f6ef; }
+    .hero { position: relative; border-bottom: 1px solid var(--border); background: #eaf6fd; }
     .hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 80px; align-items: center; padding: 88px 0; }
     .hero h1 { margin: 0; font-size: clamp(3.6rem, 6.6vw, 5.6rem); font-weight: 400; letter-spacing: -.05em; }
     .hero h1 span { display: block; margin: 13px 0 0; color: var(--muted); font-family: inherit; font-size: 1.15rem; font-weight: 400; letter-spacing: .025em; }
@@ -81,36 +81,32 @@
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 19px; border: 1px solid transparent; border-radius: 7px; font-size: .88rem; font-weight: 600; text-decoration: none; }
     .button-primary { color: white; background: var(--cyan-dark); }
-    .button-primary:hover { background: #194e48; }
-    .button-ghost { color: var(--navy); border-color: #bacdc2; background: transparent; }
-    .button-ghost:hover { background: #e7eee7; }
-    .profile-panel { padding-left: 28px; border-left: 1px solid #cad8ce; }
+    .button-primary:hover { background: #104e72; }
+    .button-ghost { color: var(--navy); border-color: #afd6eb; background: transparent; }
+    .button-ghost:hover { background: #e0f2fc; }
+    .profile-panel { padding-left: 28px; border-left: 1px solid #bddded; }
     .profile-panel .eyebrow { margin-bottom: 20px; }
     .profile-links { display: grid; }
-    .profile-link { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 0; border-bottom: 1px solid #d5e0d7; color: var(--navy); text-decoration: none; }
+    .profile-link { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 0; border-bottom: 1px solid #cee5f2; color: var(--navy); text-decoration: none; }
     .profile-link:hover { color: var(--cyan); }
     .profile-link span:first-child { font-size: .98rem; font-weight: 600; }
     .profile-link small { display: block; margin-top: 2px; color: var(--muted); font-size: .78rem; font-weight: 400; }
     .profile-arrow { color: var(--cyan); font-size: 1.2rem; }
-    .profile-note { margin: 20px 0 0; color: var(--muted); font-size: .8rem; }
     .research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-    .card { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--border); border-top: 3px solid #88ab9b; border-radius: 0 0 var(--radius) var(--radius); background: white; }
-    .tag { align-self: flex-start; margin-bottom: 20px; color: var(--cyan-dark); font-size: .75rem; font-weight: 700; letter-spacing: .04em; }
+    .card { display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--border); border-top: 3px solid #7dc7ee; border-radius: 0 0 var(--radius) var(--radius); background: white; }
     .card h3 { font-size: 1.45rem; line-height: 1.4; text-wrap: pretty; }
     .card p { margin: 18px 0 0; color: var(--muted); font-size: .94rem; line-height: 1.85; }
     .paper-link { margin-top: auto; padding-top: 24px; color: var(--cyan-dark); font-size: .82rem; font-weight: 600; text-decoration: none; }
     .paper-link:hover { text-decoration: underline; }
-    .questions { margin-top: 30px; padding: 25px 0 0; border-top: 1px solid var(--border); }
-    .questions h3 { font: 600 .8rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
-    .question-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 15px; }
-    .question { color: var(--navy); font: italic 1.05rem/1.65 Georgia, serif; }
+    .paper-links { margin-top: auto; padding-top: 24px; color: var(--muted); font-size: .82rem; }
+    .paper-links a { margin-left: 6px; color: var(--cyan-dark); font-weight: 600; }
     .publication-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: 28px 0; }
     .output-statistics { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
     .output-stat { display: inline-flex; align-items: baseline; gap: 7px; color: var(--muted); font-size: .85rem; }
     .output-stat + .output-stat { padding-left: 12px; border-left: 1px solid var(--border); }
     .output-stat strong { color: var(--navy); font-size: 1.15rem; font-weight: 600; font-variant-numeric: tabular-nums; }
     .publication-toolbar .output-statistics { margin: 0; }
-    .search-box { display: flex; align-items: center; gap: 10px; width: min(100%, 400px); padding: 11px 15px; border: 1px solid #bdcdc3; border-radius: 7px; background: var(--paper); }
+    .search-box { display: flex; align-items: center; gap: 10px; width: min(100%, 400px); padding: 11px 15px; border: 1px solid #aacfe4; border-radius: 7px; background: var(--paper); }
     .search-box:focus-within { outline: 2px solid var(--cyan); outline-offset: 2px; }
     .search-box input { width: 100%; min-width: 0; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 1rem; }
     .search-box input::placeholder { color: var(--muted); }
@@ -127,7 +123,7 @@
     .archive { margin-top: 5px; }
     .archive-button { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 18px; border-radius: 6px; color: var(--navy); background: var(--paper); list-style: none; }
     .archive-button::-webkit-details-marker, .year-summary::-webkit-details-marker { display: none; }
-    .archive-button:hover { background: #eaf0e8; }
+    .archive-button:hover { background: #e6f4fc; }
     .archive-button strong { font-size: .88rem; font-weight: 600; }
     .archive-button small { margin-left: 12px; color: var(--muted); font-size: .8rem; }
     .archive-arrow, .year-arrow { transition: transform .2s; }
@@ -136,7 +132,7 @@
     .no-results, .presentation-no-results { padding: 24px; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); }
     .cv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; margin-top: 40px; }
     .subheading { margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--border); font-size: 1.4rem; }
-    .timeline-item { position: relative; display: grid; gap: 5px; padding: 0 0 28px 24px; border-left: 1px solid #c9d8ce; }
+    .timeline-item { position: relative; display: grid; gap: 5px; padding: 0 0 28px 24px; border-left: 1px solid #c7deec; }
     .timeline-item::before { content: ""; position: absolute; left: -4px; top: 10px; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); }
     .timeline-date { color: var(--cyan-dark); font-size: .8rem; font-weight: 600; font-variant-numeric: tabular-nums; }
     .timeline-title { color: var(--navy); font-weight: 600; }
@@ -144,18 +140,19 @@
     a.timeline-title:hover { text-decoration: underline; }
     .timeline-item > div:last-child { font-size: .94rem; }
     .timeline-note { margin: 6px 0 0; color: var(--muted); font-size: .88rem; }
-    .presentation-section { background: #edf2ec; border-block: 1px solid var(--border); }
+    .presentation-section { background: #edf7fd; border-block: 1px solid var(--border); }
     .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-    .filter-button { min-height: 44px; border: 1px solid #becfc2; padding: 8px 18px; border-radius: 7px; color: var(--muted); background: transparent; font-size: .88rem; font-weight: 600; }
-    .filter-button:hover { color: var(--cyan-dark); background: #e1eadf; }
+    .filter-button { min-height: 44px; border: 1px solid #b5d7e9; padding: 8px 18px; border-radius: 7px; color: var(--muted); background: transparent; font-size: .88rem; font-weight: 600; }
+    .filter-button:hover { color: var(--cyan-dark); background: #daeffb; }
     .filter-button.active { color: white; border-color: var(--cyan-dark); background: var(--cyan-dark); }
     .presentation-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
-    .presentation-group h3 { font-size: 1.45rem; }
+    .presentation-group[data-category="seminar"] { grid-column: 1 / -1; }
+    .presentation-group h3 { margin-bottom: 18px; font-size: 1.45rem; }
     .presentation-count { margin: 8px 0 22px; color: var(--muted); font-size: .88rem; }
     .presentation-list { display: grid; gap: 12px; }
-    .year-block { min-width: 0; border: 1px solid #ccd9ce; border-radius: 9px; background: #fff; }
+    .year-block { min-width: 0; border: 1px solid #c4dfef; border-radius: 9px; background: #fff; }
     .year-summary { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 62px; padding: 14px 20px; list-style: none; }
-    .year-summary:hover { background: #f7f9f4; border-radius: 9px; }
+    .year-summary:hover { background: #f4faff; border-radius: 9px; }
     .year-summary-main, .year-summary-meta { display: flex; align-items: center; gap: 10px; }
     .year-label { color: var(--navy); font-size: 1rem; font-weight: 600; }
     .year-count { color: var(--muted); font-size: .78rem; }
@@ -168,7 +165,7 @@
     .presentation-tag { padding: 2px 9px; border-radius: 4px; font-size: .7rem; font-weight: 600; }
     .presentation-tag.oral { color: var(--cyan-dark); background: var(--cyan-light); }
     .presentation-tag.poster { color: #6f567e; background: #f3edf6; }
-    .presentation-tag.other { color: #6d6148; background: #f4f0e5; }
+    .presentation-tag.seminar { color: #34558b; background: #edf2ff; }
     .presentation-title { color: var(--navy); font-size: .96rem; font-weight: 600; line-height: 1.7; overflow-wrap: anywhere; }
     .presentation-event { margin-top: 7px; color: var(--muted); font-size: .85rem; line-height: 1.75; }
     .skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 35px; }
@@ -177,27 +174,38 @@
     .skill-card h3 { font-size: 1.35rem; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
     .chip { padding: 6px 12px; border-radius: 5px; color: var(--text); background: var(--paper); font-size: .9rem; }
-    .contact { color: #e3ece6; background: #203b35; }
+    .contact { color: #e5f4fc; background: #173e5a; }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; }
-    .contact h2 { color: #f5f8ef; }
-    .contact .eyebrow { color: #b6d3be; }
-    .contact-intro { max-width: 390px; color: #bed0c6; }
+    .contact h2 { color: #f4fbff; }
+    .contact .eyebrow { color: #b6e3fb; }
+    .contact-intro { max-width: 390px; color: #c4ddec; }
     .contact-items { display: grid; gap: 22px; }
-    .contact-item { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 12px; padding-bottom: 22px; border-bottom: 1px solid #4b6659; color: #e3ece6; text-decoration: none; font-size: .94rem; }
+    .contact-item { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 12px; padding-bottom: 22px; border-bottom: 1px solid #46718d; color: #e5f4fc; text-decoration: none; font-size: .94rem; }
     a.contact-item:hover .contact-value, a.contact-item:hover strong { text-decoration: underline; }
-    .contact-item small { display: block; color: #bed0c6; font-size: .78rem; }
+    .contact-item small { display: block; color: #c4ddec; font-size: .78rem; }
     .contact-item strong, .contact-value { display: block; margin-top: 4px; font-weight: 400; overflow-wrap: anywhere; }
     footer { padding: 24px 0; color: var(--muted); background: var(--paper); font-size: .78rem; }
     .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
     .back-to-top { color: var(--cyan-dark); text-decoration: none; }
     .back-to-top:hover { text-decoration: underline; }
+    .name-note { margin: 18px 0 0; color: var(--muted); font-size: .86rem; line-height: 1.8; }
+    .name-note strong { color: var(--navy); font-weight: 600; white-space: nowrap; }
+    [id^="publication-"] { scroll-margin-top: 100px; }
+    .presentation-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: 26px 0 32px; }
+    .presentation-toolbar .filters { margin: 0; }
+    .presentation-original { margin-top: 6px; color: var(--muted); font-size: .85rem; line-height: 1.8; }
+    .presentation-event a { color: var(--cyan-dark); }
+    .presentation-venue { margin-top: 3px; color: var(--muted); font-size: .8rem; }
+    .presentation-summary { margin: 18px 0 0; color: var(--muted); font-size: .88rem; }
+    .presentation-summary strong { color: var(--navy); }
+    .group-total { margin-left: 8px; color: var(--cyan-dark); font: 500 .85rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; white-space: nowrap; }
     @media (max-width: 1050px) {
       .desktop-nav { display: none; }
       .menu-button { display: block; }
-      .mobile-nav { position: absolute; top: 100%; right: 0; left: 0; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; padding: 16px 40px 24px; border-bottom: 1px solid var(--border); background: var(--paper); box-shadow: 0 12px 20px #203b3510; }
+      .mobile-nav { position: absolute; top: 100%; right: 0; left: 0; max-height: calc(100dvh - var(--header-height)); overflow-y: auto; padding: 16px 40px 24px; border-bottom: 1px solid var(--border); background: var(--paper); box-shadow: 0 12px 20px #173e5a10; }
       .mobile-nav.open { display: grid; }
       .mobile-nav a { padding: 10px 12px; border-radius: 5px; text-decoration: none; }
-      .mobile-nav a:hover, .mobile-nav a.active { color: var(--cyan-dark); background: #e7eee7; }
+      .mobile-nav a:hover, .mobile-nav a.active { color: var(--cyan-dark); background: #e0f2fc; }
       .hero-inner { grid-template-columns: minmax(0, 1fr) 240px; gap: 35px; }
       .research-grid { grid-template-columns: 1fr; }
       .card { padding: 28px 32px; }
@@ -212,15 +220,13 @@
       .hero h1 { font-size: clamp(3.3rem, 12vw, 4.8rem); }
       .hero h1 span { font-size: 1rem; }
       .hero-lead { font-size: 1.2rem; }
-      .profile-panel { padding: 24px 0 0; border-left: 0; border-top: 1px solid #cad8ce; }
+      .profile-panel { padding: 24px 0 0; border-left: 0; border-top: 1px solid #bddded; }
       .profile-panel .eyebrow { margin-bottom: 6px; }
       .profile-links { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
       .profile-link { gap: 5px; padding: 12px 0; }
       .profile-link span:first-child { font-size: .87rem; }
       .profile-link small { font-size: .7rem; }
-      .profile-note { margin-top: 12px; }
       .cv-grid, .presentation-columns, .skill-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-      .question-grid { grid-template-columns: 1fr; gap: 10px; }
       .card { padding: 26px; }
       .publication { grid-template-columns: 28px minmax(0, 1fr); gap: 12px; padding: 23px 0; }
       .publication-title { font-size: 1.17rem; }
@@ -332,20 +338,14 @@
       <h1>
        Coh Miyao
        <span>
-        <span lang="ja" style="display:inline;font:inherit;color:inherit;margin:0">宮尾 光</span> / Kou Miyao
+        <span lang="ja" style="display:inline;font:inherit;color:inherit;margin:0">宮尾 光</span>
        </span>
       </h1>
+      <p class="name-note">I publish as <strong>Coh Miyao</strong> (C. Miyao).<br>My legal name, as shown on my passport, is <strong>Kou Miyao</strong>.</p>
       <p class="hero-lead">
        Phenomenology of dark matter, neutrinos, and lepton flavor symmetry.
       </p>
-      <div class="affiliation-list">
-       <div>
-        JSPS Research Fellow (PD), Tokyo University of Science
-       </div>
-       <div>
-        Noda, Chiba, Japan
-       </div>
-      </div>
+      <div class="affiliation-list">JSPS Research Fellow (PD), Tokyo University of Science</div>
       <div class="hero-actions">
        <a class="button button-primary" href="#publications">
         View publications →
@@ -386,7 +386,6 @@
        </span>
       </a>
      </div>
-      <p class="profile-note">Tokyo University of Science<br>Noda, Chiba, Japan</p>
      </aside>
     </div>
 
@@ -402,81 +401,24 @@
       Dark matter, neutrinos &amp; flavor
      </h2>
      <p class="section-lead">
-      My work connects theoretical model building with phenomenological constraints, numerical analysis, and modern search methods. I am also interested in testing these models at future experiments, including HK, FCC, and DUNE. Publication numbers correspond to the list below.
+      I connect theoretical model building with experimental constraints and numerical methods, including tests at future experiments such as HK, FCC, and DUNE.
      </p>
-
      <div class="research-grid">
-
       <article class="card">
-       <span class="tag">
-        Dark Matter
-       </span>
-       <h3>
-        WIMP Dark Matter from a $Z_4$ Flavor Symmetry
-       </h3>
-       <p>
-        I investigate whether flavor structure can simultaneously explain dark-matter stability and suppress its scattering with ordinary matter. In a $Z_4$ lepton-flavor model, dark matter couples to a flavored mediator associated with the muon and tau sectors.
-       </p>
-       <p>
-        The symmetry protects dark-matter stability, while tree-level scattering with nucleons and electrons is absent. Loop-induced interactions nevertheless make the model testable in future direct-detection experiments.
-       </p>
-       <a class="paper-link" href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.106.035017" rel="noopener noreferrer" target="_blank">
-        [1] Phys. Rev. D 106, 035017 (2022) ↗
-       </a>
+       <h3>Dark matter</h3>
+       <p>I explore how lepton flavor symmetry stabilizes WIMP dark matter and suppresses its interactions with ordinary matter, while leaving signatures accessible to future direct-detection experiments.</p>
+       <a class="paper-link" href="#publication-1">Related publication [1] ↓</a>
       </article>
-
       <article class="card">
-       <span class="tag">
-        Neutrinos
-       </span>
-       <h3>
-        Neutrino Physics in Gauged $U(1)_{L_\mu-L_\tau}$ Models
-       </h3>
-       <p>
-        I study gauged $U(1)_{L_\mu-L_\tau}$ models as frameworks for neutrino masses, oscillations, and the muon $g-2$ anomaly. The symmetry produces a predictive flavor structure in the neutrino mass matrix.
-       </p>
-       <p>
-        We evaluated constraints from $Z$–$Z'$ mixing, meson decays, atomic parity violation, scalar-sector unitarity, and the $T$ parameter. An extended scalar sector can restore phenomenological viability.
-       </p>
-       <a class="paper-link" href="https://link.springer.com/article/10.1007/JHEP12(2024)018" rel="noopener noreferrer" target="_blank">
-        [3] JHEP 12 (2024) 018 ↗
-       </a>
+       <h3>Neutrinos &amp; flavor symmetry</h3>
+       <p>I study neutrino masses and mixing in gauged $U(1)_{L_\mu-L_\tau}$ models, and test neutrino mass textures against oscillation, cosmological, and other experimental constraints.</p>
+       <div class="paper-links">Related publications <a href="#publication-3" aria-label="Publication 3">[3]</a> <a href="#publication-5" aria-label="Publication 5">[5]</a></div>
       </article>
-
       <article class="card">
-       <span class="tag">
-        Machine Learning
-       </span>
-       <h3>
-        Machine-Learning Searches for Flavor Models
-       </h3>
-       <p>
-        I apply reinforcement learning to discrete searches in theories of flavor. In Froggatt–Nielsen models, the algorithm learns charge assignments capable of reproducing quark and lepton masses and mixing angles.
-       </p>
-       <p>
-        Extending the method to flaxion models produced more than 150 realistic quark-sector solutions connecting flavor physics with the strong-CP problem.
-       </p>
-       <a class="paper-link" href="#publications">
-        [2,4] JHEP 12 (2023) 021; JHEP 10 (2025) 043 ↓
-       </a>
+       <h3>Machine learning for model building</h3>
+       <p>I use reinforcement learning to search for flavor charge assignments that reproduce quark and lepton masses and mixing, including axion models that connect flavor physics to the strong-CP problem.</p>
+       <div class="paper-links">Related publications <a href="#publication-2" aria-label="Publication 2">[2]</a> <a href="#publication-4" aria-label="Publication 4">[4]</a></div>
       </article>
-
-     </div>
-     <div class="questions">
-      <h3>
-       Open questions
-      </h3>
-      <div class="question-grid">
-       <div class="question">
-        What is dark matter?
-       </div>
-       <div class="question">
-        What is the origin of neutrino mass?
-       </div>
-       <div class="question">
-        Is flavor symmetry a key to a theory of everything?
-       </div>
-      </div>
      </div>
     </div>
    </section>
@@ -516,7 +458,7 @@
 
      <div class="publication-list">
 
-      <article class="publication" data-search="2026 Revisiting One-Zero Two-Zero Neutrino Mass Textures Oscillation Cosmological Data nishimura miyao otsuka">
+      <article class="publication" id="publication-5" data-search="2026 Revisiting One-Zero Two-Zero Neutrino Mass Textures Oscillation Cosmological Data nishimura miyao otsuka">
        <div class="publication-number">
         05
        </div>
@@ -560,7 +502,7 @@
       <div class="archive-content" id="publicationArchiveContent">
        <div class="publication-list">
 
-        <article class="publication" data-search="2025 reinforcement learning axion flavor nishimura miyao otsuka jhep">
+        <article class="publication" id="publication-4" data-search="2025 reinforcement learning axion flavor nishimura miyao otsuka jhep">
          <div class="publication-number">
           04
          </div>
@@ -584,7 +526,7 @@
          </div>
         </article>
 
-        <article class="publication" data-search="2024 constraints gauged u1 lmu ltau z mixing asai miyao okawa tsumura jhep">
+        <article class="publication" id="publication-3" data-search="2024 constraints gauged u1 lmu ltau z mixing asai miyao okawa tsumura jhep">
          <div class="publication-number">
           03
          </div>
@@ -608,7 +550,7 @@
          </div>
         </article>
 
-        <article class="publication" data-search="2023 exploring flavor quarks leptons reinforcement learning nishimura miyao otsuka jhep">
+        <article class="publication" id="publication-2" data-search="2023 exploring flavor quarks leptons reinforcement learning nishimura miyao otsuka jhep">
          <div class="publication-number">
           02
          </div>
@@ -632,7 +574,7 @@
          </div>
         </article>
 
-        <article class="publication" data-search="2022 scalar dark matter mutau flavored mediator asai miyao okawa tsumura physical review d">
+        <article class="publication" id="publication-1" data-search="2022 scalar dark matter mutau flavored mediator asai miyao okawa tsumura physical review d">
          <div class="publication-number">
           01
          </div>
@@ -875,737 +817,441 @@
 
    <section class="section presentation-section" id="presentations">
     <div class="container">
-     <p class="eyebrow">
-      Presentations
-     </p>
-     <h2>
-      Talks and posters
-     </h2>
-     <p class="section-lead">
-      Selected presentations at international conferences, domestic workshops, and seminars.
-     </p>
-     <div aria-label="Presentation statistics" class="output-statistics">
-      <span class="output-stat">
-       <strong id="presentationTotalCount">
-        29
-       </strong>
-       total
-      </span>
-      <span class="output-stat">
-       <strong id="talkTotalCount">
-        24
-       </strong>
-       talks
-      </span>
-      <span class="output-stat">
-       <strong id="posterTotalCount">
-        5
-       </strong>
-       posters
-      </span>
-      <span class="output-stat">
-       <strong id="otherTotalCount">
-        0
-       </strong>
-       other
-      </span>
+     <p class="eyebrow">Presentations</p>
+     <h2>Conferences &amp; seminars</h2>
+     <p class="section-lead">Japanese titles are accompanied by English translations. Browse by year or search for a title, meeting, or location.</p>
+     <p class="presentation-summary"><strong id="presentationTotalCount">33</strong> presentations · 2022–2026</p>
+     <div class="presentation-toolbar">
+      <div class="filters" role="group" aria-label="Presentation type">
+       <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All types</button>
+       <button type="button" class="filter-button" data-filter="oral" aria-pressed="false">Oral</button>
+       <button type="button" class="filter-button" data-filter="poster" aria-pressed="false">Poster</button>
+       <button type="button" class="filter-button" data-filter="seminar" aria-pressed="false">Seminar</button>
+      </div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><input id="presentationSearch" type="search" aria-label="Search presentations" placeholder="Search titles, meetings, years…"></label>
      </div>
-
-     <div aria-label="Filter presentations" class="filters" role="group">
-      <button aria-pressed="true" class="filter-button active" data-filter="all" type="button">
-       All
-      </button>
-      <button aria-pressed="false" class="filter-button" data-filter="oral" type="button">
-       Oral
-      </button>
-      <button aria-pressed="false" class="filter-button" data-filter="poster" type="button">
-       Poster
-      </button>
-      <button aria-pressed="false" class="filter-button" data-filter="other" type="button">
-       Other
-      </button>
-     </div>
-
+     <p class="search-status" id="presentationSearchStatus" role="status" hidden></p>
      <div class="presentation-columns">
-      <div class="presentation-group">
-       <h3>
-        International conferences
-       </h3>
-       <p class="presentation-count">
-        Presentations delivered in English
-       </p>
+      <div class="presentation-group" data-category="international">
+       <h3>International conferences<span class="group-total">9</span></h3>
        <div class="presentation-list">
-
-        <details class="year-block presentation-year is-latest" data-year="2025" open>
-        
-          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2025
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">3 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+        <details class="year-block presentation-year is-latest" data-year="2026" open>
+         <summary class="year-summary">
+          <span class="year-summary-main"><span class="year-label">2026</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">1 presentation</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            May. 2025
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z'$ Mixing
-            </div>
-            <div class="presentation-event">
-             Workshop on Dark Matter and Neutrinos, IHP, Paris, France
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Mar. 2025
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             Analysis of the Neutrino Mass Matrix with Two Zero Components
-            </div>
-            <div class="presentation-event">
-             Particle Physics and Cosmology from String Compactification, 4th Meeting, Nishijin Plaza, Fukuoka, Japan
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Feb. 2025
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z'$ Mixing
-            </div>
-            <div class="presentation-event">
-             KEK-PH 2025, KEK, Tsukuba, Japan
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-5" data-type="poster">
+         <time class="presentation-date" datetime="2026-08-09">9 Aug 2026</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">Neutrino Mass Generation and Dark Matter Phenomenology in a Neutrinophilic Dark Matter Model</div>
+          <div class="presentation-event">30th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology (SI2026)</div>
+          <div class="presentation-venue">Fuji Calm, Yamanashi, Japan</div>
+         </div>
+        </article>
          </div>
         </details>
-
+        <details class="year-block presentation-year" data-year="2025">
+         <summary class="year-summary">
+          <span class="year-summary-main"><span class="year-label">2025</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">2 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
+         </summary>
+         <div class="year-content">
+        <article class="presentation" id="activity-8" data-type="oral">
+         <time class="presentation-date" datetime="2025-05-09">9 May 2025</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-event"><a href="https://indico.cern.ch/event/1335554/" rel="noopener noreferrer" target="_blank">Dark Matter and Neutrinos ↗</a></div>
+          <div class="presentation-venue">IHP, Paris, France</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-15" data-type="oral">
+         <time class="presentation-date" datetime="2025-02-18">18 Feb 2025</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-event">KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter)</div>
+          <div class="presentation-venue">KEK, Tsukuba, Japan</div>
+         </div>
+        </article>
+         </div>
+        </details>
         <details class="year-block presentation-year" data-year="2024">
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2024
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">2 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2024</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">2 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Jun. 2024
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z'$ Mixing
-            </div>
-            <div class="presentation-event">
-             SUSY 2024, IFT, Madrid, Spain
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Jun. 2024
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z'$ Mixing
-            </div>
-            <div class="presentation-event">
-             PLANCK 2024, IST, Lisbon, Portugal
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-11" data-type="oral">
+         <time class="presentation-date" datetime="2024-06-10">10 Jun 2024</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-event"><a href="https://indico.cern.ch/event/1354279/" rel="noopener noreferrer" target="_blank">Supersymmetry and Unification of Fundamental Interactions (SUSY 2024) ↗</a></div>
+          <div class="presentation-venue">IFT, Madrid, Spain</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-10" data-type="oral">
+         <time class="presentation-date" datetime="2024-06-06">6 Jun 2024</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-event"><a href="https://indico.cern.ch/event/1323379/overview" rel="noopener noreferrer" target="_blank">PLANCK 2024 ↗</a></div>
+          <div class="presentation-venue">IST, Lisbon, Portugal</div>
+         </div>
+        </article>
          </div>
         </details>
-
         <details class="year-block presentation-year" data-year="2023">
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2023
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">3 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2023</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">3 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
-
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Nov. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             Neutrino models based on the $U(1)_{L_\mu-L_\tau}$ gauge symmetry
-            </div>
-            <div class="presentation-event">
-             KEK-PH 2023, KEK, Tsukuba, Japan
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="poster">
-           <div class="presentation-date">
-            Aug. 2023
-           </div>
-           <span class="presentation-tag poster">
-            Poster
-           </span>
-           <div>
-            <div class="presentation-title">
-             Scalar dark matter with a $\mu\tau$ flavored mediator
-            </div>
-            <div class="presentation-event">
-             27th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology, Sun-Link-Sea Hotel, Taiwan
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Jun. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             Scalar Dark Matter with a $\mu\tau$ Flavored Mediator
-            </div>
-            <div class="presentation-event">
-             HPNP2023, Osaka University, Osaka
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-22" data-type="oral">
+         <time class="presentation-date" datetime="2023-11-07">7 Nov 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Neutrino Models Based on the $U(1)_{\mu-\tau}$ Gauge Symmetry</div>
+          <div class="presentation-event">KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2023)</div>
+          <div class="presentation-venue">KEK, Tsukuba, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-19" data-type="poster">
+         <time class="presentation-date" datetime="2023-08-23">23 Aug 2023</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">Scalar Dark Matter with a $\mu\tau$ Flavored Mediator</div>
+          <div class="presentation-event"><a href="https://phys.ncts.ntu.edu.tw/act/actnews/26th-8087265/home/introduction" rel="noopener noreferrer" target="_blank">27th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology (SI2023) ↗</a></div>
+          <div class="presentation-venue">Sun-Link-Sea Hotel, Taiwan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-17" data-type="oral">
+         <time class="presentation-date" datetime="2023-06-06">6 Jun 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Scalar Dark Matter with a $\mu\tau$ Flavored Mediator</div>
+          <div class="presentation-event"><a href="http://www-het.phys.sci.osaka-u.ac.jp/~nhwg/HPNP2023/program.html" rel="noopener noreferrer" target="_blank">Higgs as a Probe of New Physics (HPNP2023), 6th International Workshop ↗</a></div>
+          <div class="presentation-venue">Osaka University, Osaka, Japan</div>
+         </div>
+        </article>
          </div>
         </details>
-
         <details class="year-block presentation-year" data-year="2022">
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2022
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">1 presentation</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2022</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">1 presentation</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
-
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Nov. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             Scalar dark matter with a $\mu\tau$ flavored mediator
-            </div>
-            <div class="presentation-event">
-             KEK-PH 2022 and International Joint Workshop on the Standard Model and Beyond, KEK, Tsukuba, Japan
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-33" data-type="oral">
+         <time class="presentation-date" datetime="2022-11-29">29 Nov 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Scalar Dark Matter with a $\mu\tau$ Flavored Mediator</div>
+          <div class="presentation-event">KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2022) and International Joint Workshop on the Standard Model and beyond</div>
+          <div class="presentation-venue">KEK, Tsukuba, Japan</div>
+         </div>
+        </article>
          </div>
         </details>
        </div>
-       <p class="presentation-no-results" hidden="">
-        No presentations match this filter.
-       </p>
+       <p class="presentation-no-results" hidden>No presentations match your search or filter.</p>
       </div>
-      
-      <div class="presentation-group">
-       <h3>
-        Domestic workshops and seminars
-       </h3>
-       <p class="presentation-count">
-        Presentations delivered in Japanese.
-       </p>
+      <div class="presentation-group" data-category="domestic">
+       <h3>Domestic meetings &amp; conferences<span class="group-total">23</span></h3>
        <div class="presentation-list">
-
-        <details class="year-block presentation-year is-latest" data-year="2024" open>
+        <details class="year-block presentation-year is-latest" data-year="2026" open>
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2024
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">5 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2026</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">3 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
-
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Nov. 2024
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             $U(1)_{L_\mu-L_\tau}$ゲージ対称性に基づくニュートリノ模型への新しい制限
-            </div>
-            <div class="presentation-event" lang="ja">
-             第130回日本物理学会九州支部例会, 福岡工業大学, 福岡
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Sep. 2024
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             $Z$–$Z'$混合を介した$U(1)_{L_\mu-L_\tau}$ゲージ模型への新たな制限
-            </div>
-            <div class="presentation-event" lang="ja">
-             日本物理学会秋季大会2024, 北海道大学, 北海道
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="poster">
-           <div class="presentation-date">
-            Aug. 2024
-           </div>
-           <span class="presentation-tag poster">
-            Poster
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             $Z$–$Z'$混合を介した$U(1)_{L_\mu-L_\tau}$ゲージ模型への新しい制限
-            </div>
-            <div class="presentation-event" lang="ja">
-             素粒子物理学の進展2024 (PPP2024), YITP, 京都
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Jan. 2024
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z'$ Mixing
-            </div>
-            <div class="presentation-event">
-             New Higgs Working Group, 37th Regular Meeting, Osaka University, Osaka
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="poster">
-           <div class="presentation-date">
-            Jan. 2024
-           </div>
-           <span class="presentation-tag poster">
-            Poster
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             $U(1)_{\mu-\tau}$対称性に基づくニュートリノ模型への新しい制限
-            </div>
-            <div class="presentation-event" lang="ja">
-             量子ネイティブ育成研究シンポジウム, 九州大学, 福岡
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-7" data-type="oral">
+         <time class="presentation-date" datetime="2026-09-16">16 Sep 2026</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Neutrino Mass Generation and Dark Matter Phenomenology in a Neutrino-Portal Dark Matter Model</div>
+          <div class="presentation-original" lang="ja">ニュートリノポータル暗黒物質模型におけるニュートリノ質量生成と暗黒物質の現象論</div>
+          <div class="presentation-event">81st Annual Meeting of the Physical Society of Japan</div>
+          <div class="presentation-venue">University of Tokyo, Komaba Campus, Tokyo, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-6" data-type="poster">
+         <time class="presentation-date" datetime="2026-08-25">25 Aug 2026</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">Neutrino Mass Generation and Dark Matter Phenomenology in a Neutrinophilic Dark Matter Model</div>
+          <div class="presentation-event">Progress in Particle Physics 2026 (PPP2026)</div>
+          <div class="presentation-venue">YITP, Kyoto, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-4" data-type="oral">
+         <time class="presentation-date" datetime="2026-08-07">7 Aug 2026</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Dark Matter and Neutrino Models Based on Lepton Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">レプトンフレーバー対称性に基づく暗黒物質・ニュートリノ模型</div>
+          <div class="presentation-event">Workshop on Muon LFV and Beyond</div>
+          <div class="presentation-venue">University of Tokyo, Hongo Campus, Tokyo, Japan</div>
+         </div>
+        </article>
          </div>
         </details>
-
+        <details class="year-block presentation-year" data-year="2025">
+         <summary class="year-summary">
+          <span class="year-summary-main"><span class="year-label">2025</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">2 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
+         </summary>
+         <div class="year-content">
+        <article class="presentation" id="activity-9" data-type="oral">
+         <time class="presentation-date" datetime="2025-12-20">20 Dec 2025</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Neutrino Masses Induced by Dark Matter</div>
+          <div class="presentation-original" lang="ja">暗黒物質が誘起するニュートリノ質量</div>
+          <div class="presentation-event">131st Meeting of the JPS Kyushu Branch</div>
+          <div class="presentation-venue">Sojo University, Kumamoto, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-16" data-type="oral">
+         <time class="presentation-date" datetime="2025-03-25">25 Mar 2025</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Analysis of the Neutrino Mass Matrix with Two Zero Components</div>
+          <div class="presentation-event">Particle Physics and Cosmology from String Compactification, 4th Meeting</div>
+          <div class="presentation-venue">Nishijin Plaza, Fukuoka, Japan</div>
+         </div>
+        </article>
+         </div>
+        </details>
+        <details class="year-block presentation-year" data-year="2024">
+         <summary class="year-summary">
+          <span class="year-summary-main"><span class="year-label">2024</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">5 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
+         </summary>
+         <div class="year-content">
+        <article class="presentation" id="activity-14" data-type="oral">
+         <time class="presentation-date" datetime="2024-11-16">16 Nov 2024</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Neutrino Models Based on $U(1)_{L_\mu-L_\tau}$ Gauge Symmetry</div>
+          <div class="presentation-original" lang="ja">$U(1)_{L_\mu-L_\tau}$ゲージ対称性に基づくニュートリノ模型への新しい制限</div>
+          <div class="presentation-event"><a href="https://www.kyusyu.jps.or.jp/program-130.pdf" rel="noopener noreferrer" target="_blank">JPS Kyushu Branch Meeting ↗</a></div>
+          <div class="presentation-venue">Fukuoka Institute of Technology, Fukuoka, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-13" data-type="oral">
+         <time class="presentation-date" datetime="2024-09-16">16 Sep 2024</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-original" lang="ja">$Z$–$Z&#x27;$混合を介した$U(1)_{L_\mu-L_\tau}$ゲージ模型への新たな制限</div>
+          <div class="presentation-event"><a href="https://www.jps.or.jp/activities/meetings/annual/annual-index.php" rel="noopener noreferrer" target="_blank">JPS Autumn Meeting 2024 ↗</a></div>
+          <div class="presentation-venue">Hokkaido University, Hokkaido, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-12" data-type="poster">
+         <time class="presentation-date" datetime="2024-08-20">20 Aug 2024</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-original" lang="ja">$Z$–$Z&#x27;$混合を介した$U(1)_{L_\mu-L_\tau}$ゲージ模型への新しい制限</div>
+          <div class="presentation-event"><a href="https://indico.yukawa.kyoto-u.ac.jp/event/32/" rel="noopener noreferrer" target="_blank">Progress in Particle Physics 2024 (PPP2024) ↗</a></div>
+          <div class="presentation-venue">YITP, Kyoto, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-26" data-type="oral">
+         <time class="presentation-date" datetime="2024-01-20">20 Jan 2024</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">New Constraints on Gauged $U(1)_{L_\mu-L_\tau}$ Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-event"><a href="http://www-het.phys.sci.osaka-u.ac.jp/~nhwg/NHWG/NHWG37.html" rel="noopener noreferrer" target="_blank">New Higgs Working Group, 37th Regular Meeting ↗</a></div>
+          <div class="presentation-venue">Osaka University, Osaka, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-25" data-type="poster">
+         <time class="presentation-date" datetime="2024-01-15">15 Jan 2024</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">New Constraints on Neutrino Models Based on $U(1)_{\mu-\tau}$ Symmetry</div>
+          <div class="presentation-original" lang="ja">$U(1)_{\mu-\tau}$対称性に基づくニュートリノ模型への新しい制限</div>
+          <div class="presentation-event">Quantum Native Development Research Symposium</div>
+          <div class="presentation-venue">Kyushu University, Japan</div>
+         </div>
+        </article>
+         </div>
+        </details>
         <details class="year-block presentation-year" data-year="2023">
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2023
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">8 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2023</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">6 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
-
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Dec. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             レプトンフレーバー対称性に基づくニュートリノ模型
-            </div>
-            <div class="presentation-event" lang="ja">
-             第129回日本物理学会九州支部例会, 長崎大学, 長崎
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Nov. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             レプトンフレーバー対称性に基づくニュートリノ模型
-            </div>
-            <div class="presentation-event" lang="ja">
-             Flavor Physics Workshop 2023 (FPWS2023), ハートピア熱海, 静岡
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Sep. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             レプトンフレーバー対称性に基づくニュートリノ模型の質量行列構造に注目した分類と解析
-            </div>
-            <div class="presentation-event" lang="ja">
-             日本物理学会第78回年次大会, 東北大学, 宮城
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="poster">
-           <div class="presentation-date">
-            Aug. 2023
-           </div>
-           <span class="presentation-tag poster">
-            Poster
-           </span>
-           <div>
-            <div class="presentation-title">
-             Classification of flavor models with two-zero-texture (minor) neutrino mass matrices
-            </div>
-            <div class="presentation-event" lang="ja">
-             素粒子物理学の進展2023 (PPP2023), 京都大学, 京都
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Aug. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             許されるニュートリノ質量行列構造を実現するフレーバー模型
-            </div>
-            <div class="presentation-event" lang="ja">
-             原子核三者若手 夏の学校 2023, 東京
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Feb. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー構造で探る暗黒物質
-            </div>
-            <div class="presentation-event" lang="ja">
-             Kagoshima Workshop on Particles, Fields and Strings 2023, 鹿児島
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Feb. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー構造で探る暗黒物質
-            </div>
-            <div class="presentation-event" lang="ja">
-             修論発表（理学府）, 九州大学, 福岡
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Jan. 2023
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー構造で探る暗黒物質
-            </div>
-            <div class="presentation-event" lang="ja">
-             修論予備審査（中講座）, 九州大学, 福岡
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-24" data-type="oral">
+         <time class="presentation-date" datetime="2023-12-02">2 Dec 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Neutrino Models Based on Lepton Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">レプトンフレーバー対称性に基づくニュートリノ模型</div>
+          <div class="presentation-event"><a href="https://www.kyusyu.jps.or.jp/" rel="noopener noreferrer" target="_blank">129th Meeting of the JPS Kyushu Branch ↗</a></div>
+          <div class="presentation-venue">Nagasaki University, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-23" data-type="oral">
+         <time class="presentation-date" datetime="2023-11-24">24 Nov 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Neutrino Models Based on Lepton Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">レプトンフレーバー対称性に基づくニュートリノ模型</div>
+          <div class="presentation-event">Flavor Physics Workshop 2023 (FPWS2023)</div>
+          <div class="presentation-venue">Heartpia Atami, Atami, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-21" data-type="oral">
+         <time class="presentation-date" datetime="2023-09-19">19 Sep 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Classification and Analysis of Neutrino Models Based on Lepton Flavor Symmetry through Their Mass Matrix Structures</div>
+          <div class="presentation-original" lang="ja">レプトンフレーバー対称性に基づくニュートリノ模型の質量行列構造に注目した分類と解析</div>
+          <div class="presentation-event">78th Annual Meeting of the Physical Society of Japan</div>
+          <div class="presentation-venue">Tohoku University, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-20" data-type="poster">
+         <time class="presentation-date" datetime="2023-08-29">29 Aug 2023</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">Classification of Flavor Models with a Two-Zero Texture (Minor) Neutrino Mass Matrix</div>
+          <div class="presentation-event"><a href="https://www2.yukawa.kyoto-u.ac.jp/~ppp.ws/PPP2023/index.html" rel="noopener noreferrer" target="_blank">Progress in Particle Physics 2023 (PPP2023) ↗</a></div>
+          <div class="presentation-venue">Kyoto University, Kyoto, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-18" data-type="oral">
+         <time class="presentation-date" datetime="2023-08-20">20 Aug 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Flavor Models Realizing Viable Neutrino Mass Matrix Structures</div>
+          <div class="presentation-original" lang="ja">許されるニュートリノ質量行列構造を実現するフレーバー模型</div>
+          <div class="presentation-event"><a href="https://www2.yukawa.kyoto-u.ac.jp/~sansha.wakate/school2023/index.html" rel="noopener noreferrer" target="_blank">Summer School for Young Researchers in Nuclear and Particle Physics 2023 ↗</a></div>
+          <div class="presentation-venue">National Olympics Memorial Youth Center, Tokyo, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-35" data-type="oral">
+         <time class="presentation-date" datetime="2023-02-20">20 Feb 2023</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Probing Dark Matter through Flavor Structure</div>
+          <div class="presentation-original" lang="ja">フレーバー構造で探る暗黒物質</div>
+          <div class="presentation-event">Kagoshima Workshop on Particles, Fields and Strings 2023</div>
+          <div class="presentation-venue">Sunplaza Tenmonkan, Kagoshima, Japan</div>
+         </div>
+        </article>
          </div>
         </details>
-
         <details class="year-block presentation-year" data-year="2022">
          <summary class="year-summary">
-          <span class="year-summary-main">
-           <span class="year-label">
-            2022
-           </span>
-           <span class="year-latest">
-            Latest
-           </span>
-          </span>
-          <span class="year-summary-meta">
-           <span class="year-count">7 presentations</span>
-           <span aria-hidden="true" class="year-arrow">
-            ⌄
-           </span>
-          </span>
+          <span class="year-summary-main"><span class="year-label">2022</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">7 presentations</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
          </summary>
-
          <div class="year-content">
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Dec. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー構造で探る暗黒物質
-            </div>
-            <div class="presentation-event" lang="ja">
-             第128回日本物理学会九州支部例会, 熊本大学, 熊本
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Nov. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー構造により抑制される暗黒物質の直接検出
-            </div>
-            <div class="presentation-event" lang="ja">
-             Flavor Physics Workshop 2022 (FPWS2022), 伊豆の国, 静岡
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="poster">
-           <div class="presentation-date">
-            Nov. 2022
-           </div>
-           <span class="presentation-tag poster">
-            Poster
-           </span>
-           <div>
-            <div class="presentation-title">
-             Scalar dark matter with a $\mu\tau$ flavored mediator
-            </div>
-            <div class="presentation-event" lang="ja">
-             2022年度新学術領域「ニュートリノで拓く素粒子と宇宙」研究会, 京都大学, 京都
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Sep. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー対称性により抑制される暗黒物質の直接検出
-            </div>
-            <div class="presentation-event" lang="ja">
-             令和4年度瀬戸内サマーインスティテュート, 広島大学, 広島
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Sep. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー対称性により抑制される暗黒物質の直接検出
-            </div>
-            <div class="presentation-event" lang="ja">
-             日本物理学会2022年秋季大会, 岡山理科大学, 岡山
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Aug. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title">
-             Scalar Dark Matter with a $\mu$–$\tau$ Flavored Mediator
-            </div>
-            <div class="presentation-event">
-             New Higgs Working Group, 34th Regular Meeting, Online
-            </div>
-           </div>
-          </article>
-
-          <article class="presentation" data-type="oral">
-           <div class="presentation-date">
-            Aug. 2022
-           </div>
-           <span class="presentation-tag oral">
-            Oral
-           </span>
-           <div>
-            <div class="presentation-title" lang="ja">
-             フレーバー対称性により抑制される暗黒物質の直接検出
-            </div>
-            <div class="presentation-event" lang="ja">
-             原子核三者夏の学校 2022, Online
-            </div>
-           </div>
-          </article>
-
+        <article class="presentation" id="activity-34" data-type="oral">
+         <time class="presentation-date" datetime="2022-12-03">3 Dec 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Probing Dark Matter through Flavor Structure</div>
+          <div class="presentation-original" lang="ja">フレーバー構造で探る暗黒物質</div>
+          <div class="presentation-event">128th Meeting of the JPS Kyushu Branch</div>
+          <div class="presentation-venue">Kumamoto University, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-32" data-type="oral">
+         <time class="presentation-date" datetime="2022-11-09">9 Nov 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Dark Matter Direct Detection Suppressed by Flavor Structure</div>
+          <div class="presentation-original" lang="ja">フレーバー構造により抑制される暗黒物質の直接検出</div>
+          <div class="presentation-event">Flavor Physics Workshop 2022 (FPWS2022)</div>
+          <div class="presentation-venue">New Hakkeien, Izunokuni, Shizuoka, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-31" data-type="poster">
+         <time class="presentation-date" datetime="2022-11-01">1 Nov 2022</time>
+         <span class="presentation-tag poster">Poster</span>
+         <div>
+          <div class="presentation-title">Scalar Dark Matter with a $\mu\tau$ Flavored Mediator</div>
+          <div class="presentation-event">Workshop on Exploration of Particle Physics and Cosmology with Neutrinos 2022</div>
+          <div class="presentation-venue">Kyoto University, Kyoto, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-30" data-type="oral">
+         <time class="presentation-date" datetime="2022-09-27">27 Sep 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Dark Matter Direct Detection Suppressed by Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">フレーバー対称性により抑制される暗黒物質の直接検出</div>
+          <div class="presentation-event">Setouchi Summer Institute 2022</div>
+          <div class="presentation-venue">Hiroshima University, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-29" data-type="oral">
+         <time class="presentation-date" datetime="2022-09-07">7 Sep 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Dark Matter Direct Detection Suppressed by Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">フレーバー対称性により抑制される暗黒物質の直接検出</div>
+          <div class="presentation-event"><a href="https://onsite.gakkai-web.net/jps/jps_search/2022au/data2/html/programsr.html#j7pA133" rel="noopener noreferrer" target="_blank">JPS Autumn Meeting 2022 ↗</a></div>
+          <div class="presentation-venue">Okayama University of Science, Japan</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-28" data-type="oral">
+         <time class="presentation-date" datetime="2022-08-19">19 Aug 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Scalar Dark Matter with a $\mu\tau$ Flavored Mediator</div>
+          <div class="presentation-event"><a href="http://www-het.phys.sci.osaka-u.ac.jp/~nhwg/NHWG/NHWG34.html" rel="noopener noreferrer" target="_blank">New Higgs Working Group, 34th Regular Meeting ↗</a></div>
+          <div class="presentation-venue">Online</div>
+         </div>
+        </article>
+        <article class="presentation" id="activity-27" data-type="oral">
+         <time class="presentation-date" datetime="2022-08-07">7 Aug 2022</time>
+         <span class="presentation-tag oral">Oral</span>
+         <div>
+          <div class="presentation-title">Dark Matter Direct Detection Suppressed by Flavor Symmetry</div>
+          <div class="presentation-original" lang="ja">フレーバー対称性により抑制される暗黒物質の直接検出</div>
+          <div class="presentation-event"><a href="http://www2.yukawa.kyoto-u.ac.jp/~sansha.wakate/school2022/particle.html" rel="noopener noreferrer" target="_blank">Summer School for Young Researchers in Nuclear and Particle Physics 2022 ↗</a></div>
+          <div class="presentation-venue">Online</div>
+         </div>
+        </article>
          </div>
         </details>
        </div>
-       <p class="presentation-no-results" hidden="">
-        No presentations match this filter.
-       </p>
+       <p class="presentation-no-results" hidden>No presentations match your search or filter.</p>
+      </div>
+      <div class="presentation-group" data-category="seminar">
+       <h3>Seminars<span class="group-total">1</span></h3>
+       <div class="presentation-list">
+        <details class="year-block presentation-year is-latest" data-year="2026" open>
+         <summary class="year-summary">
+          <span class="year-summary-main"><span class="year-label">2026</span><span class="year-latest">Latest</span></span>
+          <span class="year-summary-meta"><span class="year-count">1 presentation</span><span class="year-arrow" aria-hidden="true">⌄</span></span>
+         </summary>
+         <div class="year-content">
+        <article class="presentation" id="activity-3" data-type="seminar">
+         <time class="presentation-date" datetime="2026-04-28">28 Apr 2026</time>
+         <span class="presentation-tag seminar">Seminar</span>
+         <div>
+          <div class="presentation-title">New Constraints on $U(1)_{\mu-\tau}$ Neutrino Models via $Z$–$Z&#x27;$ Mixing</div>
+          <div class="presentation-original" lang="ja">$U(1)_{\mu-\tau}$ニュートリノ模型への$Z$–$Z&#x27;$混合を介した新しい制限</div>
+          <div class="presentation-event">Abe Group Seminar, Tokyo University of Science</div>
+          <div class="presentation-venue">Tokyo University of Science, Noda, Chiba, Japan</div>
+         </div>
+        </article>
+         </div>
+        </details>
+       </div>
+       <p class="presentation-no-results" hidden>No presentations match your search or filter.</p>
       </div>
      </div>
     </div>
@@ -1669,10 +1315,10 @@
        Contact
       </p>
       <h2>
-       Let’s discuss physics.
+       Get in touch.
       </h2>
       <p class="contact-intro">
-       For research inquiries, seminars, and collaboration opportunities, please contact me by email.
+       Research inquiries, seminar invitations, and collaborations are welcome.
       </p>
      </div>
      <div class="contact-items">
@@ -1712,9 +1358,6 @@
    <div class="container footer-inner">
     <span>
      © 2026 Coh Miyao. All rights reserved.
-    </span>
-    <span>
-     Particle physics · Neutrinos · Dark matter · Flavor symmetry
     </span>
     <a class="back-to-top" href="#about">Back to top ↑</a>
    </div>
@@ -1813,76 +1456,76 @@
   });
 
   const presentations = Array.from(document.querySelectorAll(".presentation"));
-  document.getElementById("presentationTotalCount").textContent = presentations.length;
-  document.getElementById("talkTotalCount").textContent = presentations.filter(function (item) {
-    return item.dataset.type === "oral";
-  }).length;
-  document.getElementById("posterTotalCount").textContent = presentations.filter(function (item) {
-    return item.dataset.type === "poster";
-  }).length;
-  document.getElementById("otherTotalCount").textContent = presentations.filter(function (item) {
-    return item.dataset.type === "other";
-  }).length;
-
   const presentationGroups = Array.from(document.querySelectorAll(".presentation-group"));
   const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
+  const presentationSearch = document.getElementById("presentationSearch");
+  const presentationStatus = document.getElementById("presentationSearchStatus");
+  const presentationText = new Map(presentations.map(function (item) {
+    return [item, normalize(item.textContent)];
+  }));
+  document.getElementById("presentationTotalCount").textContent = presentations.length;
+  let presentationFilter = "all";
+  let savedYearStates = null;
 
-  function initializePresentationYears() {
-    presentationGroups.forEach(function (group) {
-      const yearBlocks = Array.from(group.querySelectorAll(".presentation-year"));
-      const latestYear = Math.max.apply(null, yearBlocks.map(function (block) {
-        return Number(block.dataset.year);
+  function filterPresentations() {
+    const query = normalize(presentationSearch.value);
+    const words = query.split(" ").filter(Boolean);
+    const filtering = Boolean(query) || presentationFilter !== "all";
+    if (filtering && !savedYearStates) {
+      savedYearStates = new Map(Array.from(document.querySelectorAll(".presentation-year")).map(function (block) {
+        return [block, block.open];
       }));
-
-      yearBlocks.forEach(function (block) {
-        const isLatest = Number(block.dataset.year) === latestYear;
-        block.open = isLatest;
-        block.hidden = false;
-        block.classList.toggle("is-latest", isLatest);
-        const count = block.querySelectorAll(".presentation").length;
-        block.querySelector(".year-count").textContent =
-          count === 1 ? "1 presentation" : count + " presentations";
+    }
+    let totalMatches = 0;
+    presentationGroups.forEach(function (group) {
+      let groupMatches = 0;
+      group.querySelectorAll(".presentation-year").forEach(function (block) {
+        let yearMatches = 0;
+        block.querySelectorAll(".presentation").forEach(function (item) {
+          const matches = (presentationFilter === "all" || item.dataset.type === presentationFilter) &&
+            words.every(function (word) { return presentationText.get(item).includes(word); });
+          item.hidden = !matches;
+          if (matches) yearMatches += 1;
+        });
+        block.hidden = yearMatches === 0;
+        block.querySelector(".year-count").textContent = yearMatches + (yearMatches === 1 ? " presentation" : " presentations");
+        if (filtering && yearMatches) block.open = true;
+        else if (!filtering && savedYearStates) block.open = savedYearStates.get(block);
+        groupMatches += yearMatches;
       });
+      group.querySelector(".group-total").textContent = groupMatches;
+      group.querySelector(".presentation-no-results").hidden = groupMatches !== 0;
+      totalMatches += groupMatches;
     });
+    presentationStatus.hidden = !filtering;
+    presentationStatus.textContent = totalMatches + " of " + presentations.length + " presentations found";
+    if (!filtering) savedYearStates = null;
   }
-
   filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      const filter = button.dataset.filter;
-
+      presentationFilter = button.dataset.filter;
       filterButtons.forEach(function (item) {
-        const isActive = item === button;
-        item.classList.toggle("active", isActive);
-        item.setAttribute("aria-pressed", String(isActive));
+        item.classList.toggle("active", item === button);
+        item.setAttribute("aria-pressed", String(item === button));
       });
-
-      presentationGroups.forEach(function (group) {
-        let visibleYears = 0;
-        const yearBlocks = Array.from(group.querySelectorAll(".presentation-year"));
-
-        yearBlocks.forEach(function (block) {
-          const items = Array.from(block.querySelectorAll(".presentation"));
-          let visibleItems = 0;
-
-          items.forEach(function (item) {
-            const shouldShow = filter === "all" || item.dataset.type === filter;
-            item.hidden = !shouldShow;
-            if (shouldShow) visibleItems += 1;
-          });
-
-          block.hidden = visibleItems === 0;
-          if (visibleItems > 0) visibleYears += 1;
-          block.querySelector(".year-count").textContent =
-            visibleItems === 1 ? "1 presentation" : visibleItems + " presentations";
-          if (filter !== "all" && visibleItems > 0) block.open = true;
-        });
-
-        group.querySelector(".presentation-no-results").hidden = visibleYears !== 0;
-      });
-
-      if (filter === "all") initializePresentationYears();
+      filterPresentations();
     });
   });
+  presentationSearch.addEventListener("input", filterPresentations);
+
+  function revealPublicationAnchor() {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target && target.classList.contains("publication")) {
+      if (publicationSearch.value) {
+        publicationSearch.value = "";
+        publicationSearch.dispatchEvent(new Event("input"));
+      }
+      if (publicationArchive.contains(target)) publicationArchive.open = true;
+      target.scrollIntoView({ block: "start" });
+    }
+  }
+  window.addEventListener("hashchange", revealPublicationAnchor);
+  revealPublicationAnchor();
 
   const sections = Array.from(document.querySelectorAll("main section[id]"));
   const navLinks = Array.from(document.querySelectorAll(".desktop-nav a, .mobile-nav a"));
@@ -1929,7 +1572,7 @@
     printDetails.forEach(function (state) { state[0].open = state[1]; });
   });
 
-  initializePresentationYears();
+  filterPresentations();
   setActiveNavigation(window.location.hash.slice(1) || "about");
 });
   </script>
